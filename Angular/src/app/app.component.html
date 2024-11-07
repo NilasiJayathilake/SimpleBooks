@@ -1,0 +1,28 @@
+<main class="main">
+  <div class="content">
+    <div class="greeting">
+      <div>Enter Your Name: <input type="text" [(ngModel)]="customer"></div>
+      <div>Welcome to Simple Books  {{customer}}! Have a great day! </div>
+    </div>
+    <app-navbar></app-navbar>
+    <div class="title">
+      <h1>Welcome to, {{ title }} </h1>
+<!--     Above is  Data Binding-->
+   <app-shopping (searchChange)="updateSearch($event)"></app-shopping>
+      <!-- Calling a Component-->
+      <!--Two way data binding from a different component as shown above-->
+    </div>
+    <div>
+    <h2>Our Books</h2>
+      <p>  {{currentSearch}}</p>
+      <app-product></app-product>
+
+      </div>
+
+    </div>
+
+</main>
+
+
+
+<router-outlet />

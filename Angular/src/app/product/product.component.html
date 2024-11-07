@@ -1,0 +1,14 @@
+
+<div class="products" *ngIf="products.length > 0">
+<div class="product-card" *ngFor="let product of products">
+  <div class="product-image" style="background-image: url('https://via.placeholder.com/300x250');"></div>
+  <div class="product-info">
+    <div *ngIf="product.quantity==0"><p>Not Available</p></div>
+    <h2 class="product-name">{{product.name}}</h2>
+    <p class="product-price">${{product.price}}</p>
+    <p class="product-description">Available: {{product.quantity}}</p>
+    <button class="add-to-cart-btn">Add to Cart</button>
+  </div>
+</div>
+</div>
+
